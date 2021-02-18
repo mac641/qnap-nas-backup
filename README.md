@@ -10,7 +10,8 @@ It uses `rsync` and *Docker*.
     * `TZ` specifies the utilized timezone within the container.
     * Shared folders on *QTS* are stored under `/share`. This directory is 
     mounted as volume into the container. Add your preferred subdirectories 
-    to `BACKUP_DIRS`. **NOTE**: These directories will be backed up.
+    to `BACKUP_DIRS`. **NOTE**: These directories **have to be separated by 
+    , (commas)** and will be backed up.
     * `TARGET_ADDRESS` has to be a *IPv4* address within your local network.
 1. Start backing up by typing `docker-compose --compatibility up -d`.
 
