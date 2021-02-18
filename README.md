@@ -3,6 +3,10 @@ This repo contains Docker components for backing up your QNAP NAS within a LAN.
 It uses `rsync` and *Docker*.
 
 ## Setup and Usage
+1. Connect to your NAS via ssh and clone this repository. (If you haven't 
+installed *git* yet, 
+[this blog entry (https://sdhuang32.github.io/install-git-on-qts/)](https://sdhuang32.github.io/install-git-on-qts/) 
+helped me making it work.)
 1. Open `docker-compose.yml` in your preferred text editor.
 1. Under `environment:` you'll find 5 variables.
     * Edit `PUID` / `GUID`, if you're using a specific user for Docker tasks.
