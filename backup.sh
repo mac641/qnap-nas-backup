@@ -7,9 +7,9 @@ IFS="$oIFS"
 
 # back up
 for dir in "${dirs[@]}"; do
-    echo "###################################"
+    echo "####################################"
     echo "# Backing up ${dir} #"
-    echo "###################################"
+    echo "####################################"
     rsync -avzP --exclude=.@upload_cache --exclude=.streams --exclude=@Recently-Snapshot --exclude=@Recycle --exclude=.@__thumb /source/${dir}/ rsync://${TARGET_ADDRESS}:873/Backup/${dir}
     echo "##############################################"
     echo "# Finished backing up ${dir} #"
