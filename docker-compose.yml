@@ -1,0 +1,24 @@
+version: "3"
+services:
+  backup:
+    container_name: backup
+    build:
+        context: .
+        dockerfile: ./Dockerfile
+    image: backup
+    environment:
+      - PUID=1000
+      - GUID=1000
+      - TZ=Europe/Berlin
+      - BACKUP_DIRS=ExampleDir_0,ExampleDir_1
+      - TARGET_ADDRESS=192.168.178.34
+    ports:
+      - "873:873"
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup
+      - /share:/source
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 1024M
