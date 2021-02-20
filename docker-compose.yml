@@ -11,7 +11,7 @@ services:
       - GUID=1000
       - TZ=Europe/Berlin
       - BACKUP_DIRS=ExampleDir_0,ExampleDir_1
-      - TARGET_ADDRESS=192.168.178.34
+      - TARGET_URL=192.168.178.34:873/Backup
     ports:
       - "873:873"
     volumes:
