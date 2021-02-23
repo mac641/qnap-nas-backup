@@ -9,7 +9,7 @@ for dir in "${dirs[@]}"; do
     echo "###################################"
     echo "# Restoring ${dir} #"
     echo "###################################"
-    rsync -avzP --exclude=.@upload_cache --exclude=.streams --exclude=@Recently-Snapshot --exclude=@Recycle --exclude=.@__thumb rsync://${TARGET_URL}/${dir} /source/${dir}/
+    rsync -avzP --exclude=.@upload_cache --exclude=.streams --exclude=@Recently-Snapshot --exclude=@Recycle --exclude=.@__thumb rsync://${TARGET_URL}/${dir} /source/${dir}
     echo "##############################################"
     echo "# Finished restoring ${dir} #"
     echo "##############################################"
