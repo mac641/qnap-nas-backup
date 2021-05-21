@@ -18,7 +18,7 @@ helped me making it work.)
     to `BACKUP_DIRS`. **NOTE**: These directories **have to be separated by 
     , (commas)** and will be backed up later on.
     * `TARGET_URL`: URL to your `rsync` daemon directory.
-1. Start syncing by typing `docker-compose --compatibility up -d`.
+1. Start syncing by typing `sh run.sh`.
 
 ## Customization
 If you would like to back up or restore different directories, feel free to adjust 
